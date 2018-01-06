@@ -3,6 +3,8 @@ package com.developerhaoz.androidotgdemo;
 import android.app.Application;
 import android.content.Context;
 
+import com.github.mjdev.libaums.fs.UsbFile;
+
 /**
  * @author Haoz
  * @date 2018/1/6.
@@ -10,6 +12,7 @@ import android.content.Context;
 public class OtgApplication extends Application {
 
     private static Context sInstance;
+    public static UsbFile mRootDirectory;
 
     @Override
     public void onCreate() {

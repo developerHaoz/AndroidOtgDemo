@@ -112,6 +112,7 @@ public class OtgReceiver extends BroadcastReceiver {
             Partition partition = device.getPartitions().get(0);
             FileSystem currentFs = partition.getFileSystem();
             mRootFolder = currentFs.getRootDirectory();
+            OtgApplication.mRootDirectory = mRootFolder;
             // 获取 U 盘的容量
             long capacity = currentFs.getCapacity();
             // 获取 U 盘的剩余容量
